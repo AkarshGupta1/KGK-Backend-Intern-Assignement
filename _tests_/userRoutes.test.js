@@ -11,7 +11,7 @@ describe('User Authentication API', () => {
         .send({
           username: 'alam',
           password: 'alam1234',
-          email: 'fintechamir@gmail.com'
+          email: 'fintechakarsh@gmail.com'
         });
       expect(res.statusCode).toEqual(201);
       expect(res.body).toHaveProperty('username', 'alam');
@@ -46,7 +46,7 @@ describe('User Authentication API', () => {
         .post('/users/login')
         .send({
           username: 'alam',
-          password: 'amir1234'
+          password: 'akarsh1234'
         });
       expect(res.statusCode).toEqual(400);
       expect(res.body).toHaveProperty('error');
