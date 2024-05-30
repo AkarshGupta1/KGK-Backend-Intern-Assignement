@@ -67,7 +67,6 @@ describe('User Authentication API', () => {
       // Extract token from login response
       const token = loginRes.body.token;
 
-      // Now make a request to get user profile with the token
       const profileRes = await request(app)
         .get('/users/profile')
         .set('Authorization', `Bearer ${token}`);
